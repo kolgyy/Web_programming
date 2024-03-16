@@ -152,13 +152,81 @@ foreach ($numbers as $num) {
 echo "Количество элементов для суммы больше 10: $count \n";
 
 // ------ Task 15 ------
-
-
-
-
+function printStringReturnNumber(){
+    echo "Function works!", "\n";
+    return 77;
+}
+$my_num = printStringReturnNumber(); // Вызвали функцию
+echo $my_num, "\n"; // Вывели значение на консоль
 
 // ------ Task 16 ------
+
+function increaseEnthusiasm($string)
+{
+    return $string.'!'; // Возвращаем строку с прибавленным восклицательным знаком
+}
+echo increaseEnthusiasm("Hello, world"), "\n";
+
+function  repeatThreeTimes($string) // Функция, повторяющая строку три раза
+{
+    return $string.$string.$string;
+}
+echo repeatThreeTimes("_GO_"), "\n";
+
+echo increaseEnthusiasm(repeatThreeTimes("_LOVE_IS_PAIN_")), "\n";
+
+function cut($string, $length = 10)
+{
+    return substr($string, 0, $length);
+}
+
+$arr5 = [7, 12, 55, 9, -5, 0, 3, 31];
+function printArray($array, $offset = 0)
+{
+    if ($offset < count($array)) {
+        echo $array[$offset], "\t";
+        printArray($array, ++$offset);
+    }
+}
+printArray($arr5);
+
+function countDigits($number)
+{
+    $num_sum = array_sum(str_split($number));
+
+    $result = 0;
+    if ($num_sum > 9)
+        $result = countDigits($num_sum);
+    else
+        $result = $num_sum;
+
+    return $result;
+}
+
+function printElementsRecursively($array, $index = 0) {
+    if ($index < count($array)) {
+        echo $array[$index] . "\n";
+        printElementsRecursively($array, $index + 1);
+    }
+}
+$array = [1, 2, 3, 4, 5];
+printElementsRecursively($array);
+
+function sumDigits($number) {
+    $sum = array_sum(str_split($number));
+    if ($sum > 9) {
+        return sumDigits($sum);
+    } else {
+        return $sum;
+    }
+}
+
+echo sumDigits(777), "\n";
+
 // ------ Task 17 ------
+
+
+
 // ------ Task 18 ------
 // ------ Task 19 ------
 // ------ Task 20 ------
