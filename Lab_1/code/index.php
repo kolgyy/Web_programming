@@ -14,4 +14,29 @@ echo "\nYour order is: $very_bad_unclear_name.\n"; // Будет выведен�
 
 // ------ Task 2 ------
 
+$friday = 13; // Int
+echo $friday;
+echo "\n";
+
+$pi = 3.14; // Float
+echo $pi;
+echo "\n";
+
+echo --$friday; // Вывели 12 на консоль.
+echo "\n";
+
+$last_month = 1187.23;
+$this_month = 1089.98;
+
+echo "Difference: ".($last_month - $this_month); // Вывели разницу на консоль
+echo "\n";
+
+// ------ Task 11 ------
+
+$num_languages = 4;
+$months = 11;
+$days = $months * 16;
+$days_per_languages = $days / $num_languages; // Нашли среднее арифметическое
+echo $days_per_languages, "\n";
+
 
