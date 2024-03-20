@@ -71,7 +71,7 @@ $a = 10;
 $b = 3;
 $remainderOfdivision = $a % $b;
 
-if ($remainderOfdivision == 0)
+if (0 == $remainderOfdivision)
     echo "Делится\n";
 else
     echo "Делится с остатком $remainderOfdivision\n";
@@ -141,7 +141,7 @@ foreach ($newArrayOfNumbers as $value)
 $number = 30;
 $dividers = [];
 for ($i = 1; $i <= $number; $i++)
-    if ($number % $i == 0)
+    if (0 == $number % $i )
         $dividers[] = $i;
 
 var_dump($dividers); // Выводим массив с делителями числа 30
@@ -153,7 +153,7 @@ $count = 0;
 foreach ($numbers as $num) {
     $sum += $num;
     $count++;
-    if ($sum > 10) {
+    if (10 < $sum) {
         break;
     }
 }
@@ -205,7 +205,7 @@ function countDigits($number)
     $num_sum = array_sum(str_split($number));
 
     $result = 0;
-    if ($num_sum > 9)
+    if (9 < $num_sum)
         $result = countDigits($num_sum);
     else
         $result = $num_sum;
@@ -224,7 +224,7 @@ printElementsRecursively($array);
 
 function sumDigits($number) {
     $sum = array_sum(str_split($number));
-    if ($sum > 9) {
+    if (9 < $sum ) {
         return sumDigits($sum);
     } else {
         return $sum;
@@ -261,7 +261,7 @@ for ($i = 0; $i != 3; $i++)
 {
     $result_sub_arr = [];
     for ($j = 1; $j != 4; $j++)
-        $result_sub_arr[] = $j + 3*$i;
+        $result_sub_arr[] = $j + 3 * $i;
     $result_arr[] = $result_sub_arr;
 }
 
@@ -285,7 +285,7 @@ echo "<br>".'----------------'."<br>";
 // ------ Task 18 ------
 function checkSum($num_a, $num_b)
 {
-    return ($num_a + $num_b > 10);
+    return (10 < $num_a + $num_b);
 }
 function checkEqual($num_a, $num_b)
 {
@@ -297,11 +297,11 @@ echo ($test == 0) ? 'верно' : '';
 echo "\n";
 
 $age = rand(0, 120);
-if ($age < 10 || $age > 99) {
+if (10 > $age || 99 < $age) {
     echo "Число вне диапазона.";
 } else {
     $sum = array_sum(str_split($age));
-    if ($sum <= 9) {
+    if ( 9 >= $sum ) {
         echo "Сумма цифр однозначна.";
     } else {
         echo "Сумма цифр двузначна.";
@@ -311,7 +311,7 @@ echo "\n";
 
 
 $arrayOfThree = [1, 2, 3];
-if (count($arrayOfThree) == 3) {
+if (3 == count($arrayOfThree)) {
     echo array_sum($arrayOfThree);
 }
 echo "<br>".'----------------'."<br>";
