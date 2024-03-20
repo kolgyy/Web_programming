@@ -32,6 +32,7 @@ $this_month = 1089.98;
 
 echo "Difference: ".($last_month - $this_month);
 echo "\n";
+
 echo "<br>".'----------------'."<br>";
 
 // ------ Task 11 ------
