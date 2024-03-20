@@ -6,43 +6,49 @@ $very_bad_unclear_name = "15 chicken wings";
 
 // Write your code here:
 
-$order =& $very_bad_unclear_name; // Указали переменной ссылку на другую переменную
-$order .= ' & 4 hamburgers'; // Произвели конкатенацию строк
+$order =& $very_bad_unclear_name;
+$order .= ' & 4 hamburgers';
 
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.\n"; // Будет выведена строка "15 chicken wings & 4 hamburgers" ,т.к. переменные указывают на одну и ту же область в памяти
 
+echo "<br>".'----------------'."<br>";
+
 // ------ Task 2 ------
 
-$friday = 13; // Int
+$friday = 13;
 echo $friday;
 echo "\n";
 
-$pi = 3.14; // Float
+$pi = 3.14;
 echo $pi;
 echo "\n";
 
-echo --$friday; // Вывели 12 на консоль.
+echo --$friday;
 echo "\n";
 
 $last_month = 1187.23;
 $this_month = 1089.98;
 
-echo "Difference: ".($last_month - $this_month); // Вывели разницу на консоль
+echo "Difference: ".($last_month - $this_month);
 echo "\n";
+echo "<br>".'----------------'."<br>";
 
 // ------ Task 11 ------
 
 $num_languages = 4;
 $months = 11;
 $days = $months * 16;
-$days_per_languages = $days / $num_languages; // Нашли среднее арифметическое
+$days_per_languages = $days / $num_languages;
 echo $days_per_languages, "\n";
+echo "<br>".'----------------'."<br>";
 
 // ------ Task 12 ------
 
-echo 8**2;
+echo 8 ** 2;
 echo "\n";
+
+echo "<br>".'----------------'."<br>";
 
 // ------ Task 13 ------
 
@@ -56,6 +62,8 @@ $answer -= $my_num;
 echo $answer;
 echo "\n";
 
+echo "<br>".'----------------'."<br>";
+
 // ------ Task 14 ------
 
 // Работа с %:
@@ -63,15 +71,15 @@ $a = 10;
 $b = 3;
 $remainderOfdivision = $a % $b;
 
-if ($remainderOfdivision == 0) // Если делится, то выводим сообщение
+if ($remainderOfdivision == 0)
     echo "Делится\n";
 else
-    echo "Делится с остатком $remainderOfdivision\n"; // Если не делится, то выводим остаток
+    echo "Делится с остатком $remainderOfdivision\n";
 
 // Работа со степенью и корнем
 $st = pow(2, 10);
 
-$result = sqrt(245); // Результат от корня квадратного из 245
+$result = sqrt(245);
 
 $arr = [4, 2, 5, 19, 13, 0, 10];
 $sum_sqrt = 0;
@@ -79,25 +87,25 @@ foreach ($arr as $value)
     $sum_sqrt += pow($value, 2);
 $sum_sqrt = sqrt($sum_sqrt);
 
-echo $st, "\n"; // 2 в степени 10.
-echo $result, "\n"; // Корень из 245
-echo $sum_sqrt, "\n"; // Корень из суммы квадратов элементов массива
+echo $st, "\n";
+echo $result, "\n";
+echo $sum_sqrt, "\n";
 
 // Работа с функциями округления
-$sqrt_res_1 = sqrt(379); // Квадратный корень из 379
-$sqrt_round_1 = round($sqrt_res_1, 0); // Результат до целых
-$sqrt_round_2 = round($sqrt_res_1, 1); // Результат до десятых
-$sqrt_round_3 = round($sqrt_res_1, 2); // Результат до сотых
+$sqrt_res_1 = sqrt(379);
+$sqrt_round_1 = round($sqrt_res_1, 0);
+$sqrt_round_2 = round($sqrt_res_1, 1);
+$sqrt_round_3 = round($sqrt_res_1, 2);
 
 // Вывод результатов округления
-echo $sqrt_round_1, "\n"; //
-echo $sqrt_round_2, "\n"; //
-echo $sqrt_round_3, "\n"; //
+echo $sqrt_round_1, "\n";
+echo $sqrt_round_2, "\n";
+echo $sqrt_round_3, "\n";
 
 $sqrt_res_2 = sqrt(587);
-$sqrt_floor = floor($sqrt_res_2); // Округление в меньшую сторону
-$sqrt_ceil = ceil($sqrt_res_2); // Округление в большую сторону
-$arr = ['floor' => $sqrt_floor, 'ceil' => $sqrt_ceil]; // Запись результатов в ассоциативный контейнер - массив.
+$sqrt_floor = floor($sqrt_res_2);
+$sqrt_ceil = ceil($sqrt_res_2);
+$arr = ['floor' => $sqrt_floor, 'ceil' => $sqrt_ceil];
 
 // Работа с min и max
 $arr2 = [4, -2, 5, 19, -130, 0, 10];
@@ -105,9 +113,9 @@ $min = min($arr2);
 $max = max($arr2);
 
 // Работа с рандомом
-echo rand(1, 100), "\n"; // Выводим случайное число от одного до ста
+echo rand(1, 100), "\n";
 
-$arr_rand = []; // Заполняем массив десятью случайными числами
+$arr_rand = [];
 for ($i = 0; $i != 10; ++$i)
     $arr_rand[] = rand();
 
@@ -123,7 +131,7 @@ echo abs($a - $b), "\n";
 $a = -20;
 $b = -3;
 echo abs($a - $b), "\n";
-// Преобразуем элементы массива в новый массив, сделав их положительными.
+
 $arrayOfNumbers = [1, 2, -1, -2, 3, -3];
 $newArrayOfNumbers = [];
 foreach ($newArrayOfNumbers as $value)
@@ -150,26 +158,28 @@ foreach ($numbers as $num) {
     }
 }
 echo "Количество элементов для суммы больше 10: $count \n";
+echo "<br>".'----------------'."<br>";
 
 // ------ Task 15 ------
 function printStringReturnNumber(){
     echo "Function works!", "\n";
     return 77;
 }
-$my_num = printStringReturnNumber(); // Вызвали функцию
-echo $my_num, "\n"; // Вывели значение на консоль
+$my_num = printStringReturnNumber();
+echo $my_num, "\n";
+echo "<br>".'----------------'."<br>";
 
 // ------ Task 16 ------
 
 function increaseEnthusiasm($string)
 {
-    return $string.'!'; // Возвращаем строку с прибавленным восклицательным знаком
+    return $string . '!';
 }
 echo increaseEnthusiasm("Hello, world"), "\n";
 
-function  repeatThreeTimes($string) // Функция, повторяющая строку три раза
+function  repeatThreeTimes($string)
 {
-    return $string.$string.$string;
+    return $string . $string . $string;
 }
 echo repeatThreeTimes("_GO_"), "\n";
 
@@ -222,6 +232,8 @@ function sumDigits($number) {
 }
 
 echo sumDigits(777), "\n";
+echo "<br>".'----------------'."<br>";
+
 
 // ------ Task 17 ------
 
@@ -268,6 +280,7 @@ echo count($arrayOfLetters), "\n";
 
 echo $arrayOfLetters[count($arrayOfLetters) - 1], "\n";
 echo $arrayOfLetters[count($arrayOfLetters) - 2], "\n";
+echo "<br>".'----------------'."<br>";
 
 // ------ Task 18 ------
 function checkSum($num_a, $num_b)
@@ -301,7 +314,37 @@ $arrayOfThree = [1, 2, 3];
 if (count($arrayOfThree) == 3) {
     echo array_sum($arrayOfThree);
 }
+echo "<br>".'----------------'."<br>";
 
+// ------ Task 19 ------
+for ($i = 1; $i <= 20; $i++) {
+    echo str_repeat('x', $i) . "\n";
+}
+echo "<br>".'----------------'."<br>";
+// ------ Task 20 ------
+
+$array = [1, 2, 3, 4, 5];
+$average = array_sum($array) / count($array);
+echo "Среднее арифметическое: $average", "\n";
+
+$sum = (1 + 100) * 100 / 2;
+echo "Сумма чисел от 1 до 100: $sum", "\n";
+
+$array = [4, 9, 16];
+$squareRoots = array_map('sqrt', $array);
+print_r($squareRoots);
+echo "\n";
+
+$letters = range('a', 'z');
+$numbers = range(1, 26);
+$alphabetArray = array_combine($letters, $numbers);
+print_r($alphabetArray);
+echo "\n";
+
+$string = '1234567890';
+$numbers = str_split($string, 2);
+$sum = array_sum($numbers);
+echo $sum, "\n";
 
 
 
