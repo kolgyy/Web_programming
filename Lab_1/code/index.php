@@ -225,8 +225,113 @@ echo sumDigits(777), "\n";
 
 // ------ Task 17 ------
 
+$x_arr = [];
+for ($i = 1; $i != 5; $i++)
+    $x_arr[] = str_repeat('x', $i);
 
+function arrayFill($value, $count)
+{
+    $arr_fill = [];
+    for ($i = 0; $i != $count; $i++)
+        $arr_fill[] = $value;
+    return $arr_fill;
+}
+
+$pl_arr = [[1, 2, 3], [4, 5], [6]];
+$pl_sum = 0;
+foreach ($pl_arr as $line_arr)
+    foreach ($line_arr as $pl_num)
+        $pl_sum += $pl_num;
+
+
+$result_arr = [];
+for ($i = 0; $i != 3; $i++)
+{
+    $result_sub_arr = [];
+    for ($j = 1; $j != 4; $j++)
+        $result_sub_arr[] = $j + 3*$i;
+    $result_arr[] = $result_sub_arr;
+}
+
+$arrayOfFour = [2, 5, 3, 9];
+$result = $arrayOfFour[0] * $arrayOfFour[1] + $arrayOfFour[2] * $arrayOfFour[3];
+echo "\n", $result, "\n";
+
+$user = ['name' => 'Edward', 'surname' => 'Korotaev', 'patronymic' => 'Edwardovich'];
+echo $user['name'] . ' ' . $user['surname'] . ' ' . $user['patronymic'], "\n";
+
+$date = ['year' => date('2024'), 'month' => date('3'), 'day' => date('16')];
+echo $date['year'] . '-' . $date['month'] . '-' . $date['day'], "\n";
+
+$arrayOfLetters = ['a', 'b', 'c', 'd', 'e'];
+echo count($arrayOfLetters), "\n";
+
+echo $arrayOfLetters[count($arrayOfLetters) - 1], "\n";
+echo $arrayOfLetters[count($arrayOfLetters) - 2], "\n";
 
 // ------ Task 18 ------
+function checkSum($num_a, $num_b)
+{
+    return ($num_a + $num_b > 10);
+}
+function checkEqual($num_a, $num_b)
+{
+    return ($num_a == $num_b);
+}
+
+$test = rand(0,1);
+echo ($test == 0) ? 'верно' : '';
+echo "\n";
+
+$age = rand(0, 120);
+if ($age < 10 || $age > 99) {
+    echo "Число вне диапазона.";
+} else {
+    $sum = array_sum(str_split($age));
+    if ($sum <= 9) {
+        echo "Сумма цифр однозначна.";
+    } else {
+        echo "Сумма цифр двузначна.";
+    }
+}
+echo "\n";
+
+
+$arrayOfThree = [1, 2, 3];
+if (count($arrayOfThree) == 3) {
+    echo array_sum($arrayOfThree);
+}
+
 // ------ Task 19 ------
+for ($i = 1; $i <= 20; $i++) {
+    echo str_repeat('x', $i) . "\n";
+}
 // ------ Task 20 ------
+
+$array = [1, 2, 3, 4, 5];
+$average = array_sum($array) / count($array);
+echo "Среднее арифметическое: $average\n";
+
+$sum = (1 + 100) * 100 / 2;
+echo "Сумма чисел от 1 до 100: $sum", "\n";
+
+$array = [4, 9, 16];
+$squareRoots = array_map('sqrt', $array);
+print_r($squareRoots);
+echo "<\n";
+
+$letters = range('a', 'z');
+$numbers = range(1, 26);
+$alphabetArray = array_combine($letters, $numbers);
+print_r($alphabetArray);
+echo "\n";
+
+$string = '1234567890';
+$numbers = str_split($string, 2);
+$sum = array_sum($numbers);
+echo $sum, "\n";
+
+
+
+
+
