@@ -71,7 +71,7 @@ $a = 10;
 $b = 3;
 $remainderOfdivision = $a % $b;
 
-if (0 == $remainderOfdivision)
+if (0 === $remainderOfdivision)
     echo "Делится\n";
 else
     echo "Делится с остатком $remainderOfdivision\n";
@@ -141,7 +141,7 @@ foreach ($newArrayOfNumbers as $value)
 $number = 30;
 $dividers = [];
 for ($i = 1; $i <= $number; $i++)
-    if (0 == $number % $i )
+    if (0 === $number % $i )
         $dividers[] = $i;
 
 var_dump($dividers); // Выводим массив с делителями числа 30
@@ -311,7 +311,7 @@ echo "\n";
 
 
 $arrayOfThree = [1, 2, 3];
-if (3 == count($arrayOfThree)) {
+if (3 === count($arrayOfThree)) {
     echo array_sum($arrayOfThree);
 }
 echo "<br>".'----------------'."<br>";
