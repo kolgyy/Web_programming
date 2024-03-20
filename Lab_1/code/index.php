@@ -290,11 +290,11 @@ function checkSum($num_a, $num_b)
 }
 function checkEqual($num_a, $num_b)
 {
-    return ($num_a == $num_b);
+    return ($num_a === $num_b);
 }
 
 $test = rand(0,1);
-echo ($test == 0) ? 'верно' : '';
+echo ($test === 0) ? 'верно' : '';
 echo "\n";
 
 $age = rand(0, 120);
